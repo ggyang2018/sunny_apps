@@ -376,9 +376,9 @@ public class PdfGenerater {
 		for(int i=0; i<selects.size(); i++)
 		{
 			MapRow mr = selects.get(i);
-			String tit = mr.getDataValue(AppConstants.TITLE_FLD);
-			String fnm = mr.getDataValue(AppConstants.FIRST_NAME_FLD);
-			String lnm = mr.getDataValue(AppConstants.LAST_NAME_FLD);
+			String tit = mr.getDataValue(AppConstants.TITLE_FLD).trim();
+			String fnm = mr.getDataValue(AppConstants.FIRST_NAME_FLD).trim();
+			String lnm = mr.getDataValue(AppConstants.LAST_NAME_FLD).trim();
 			String tk = String.format("%s <%s %s>", tit, fnm, lnm);
 			if(groups.containsKey(tk))
 			{
